@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Membership Form with validation</title>
+  <link rel="stylesheet" href="membership.css">
+  
+  <script src="membership.js"></script>
+</head>
+<body>
+
+  <div class="backarrow">
+    <title>Back Navigation Button</title>
+   
+      <a href="http://127.0.0.1:5500/index.html?" class="back-button" onclick="goBack()"> &larr; Back</a>
+         
+          <link rel="index" href="index.html">
+      </button>
+  </div>
+
+  <div class="container">
+    <h2>Gym Membership Form</h2>
+    <form action="submit.php" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      <small id="nameError" class="error"></small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+     <small id="emailError" class="error"></small>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      </div>
+      <title>Age Calculator</title>
+    
+  
+      <div class="age">
+           <form id="ageCalculatorForm">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required>
+              <button type="button" onclick="calculateAge()">Calculate Age</button>
+          </form>
+          <p id="result"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="membership">Membership Plan:</label>
+        <select id="membership" name="membership" required>
+          <option value="">Select Membership</option>
+          <option value="basic">Basic</option>
+          <option value="standard">Standard</option>
+          <option value="premium">Premium</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
